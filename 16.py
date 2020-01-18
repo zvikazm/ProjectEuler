@@ -7,7 +7,7 @@ import math
 import time
 
 
-class P15(object):
+class P16(object):
 
     @staticmethod
     def run():
@@ -16,5 +16,5 @@ class P15(object):
 
 if __name__ == '__main__':
     start_time = time.time()
-    P15.run()
+    P16.run()
     print("--- %s seconds ---" % (time.time() - start_time))
