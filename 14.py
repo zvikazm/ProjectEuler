@@ -28,17 +28,23 @@ class P14(object):
 
     @staticmethod
     def run():
+        d = {}
         max_counter = 0
         num_res = 0
         for i in range(1, 1000000):
             n = i
             counter = 1
-            #print(n, end=",")
+            # print(n, end=",")
             while n != 1:
+                if 1:
+                    if n in d:
+                        counter += d[n] - 1
+                        break
                 n = P14.next_num(n)
-                #print(n, end=",")
+                # print(n, end=",")
                 counter += 1
-            #print("\n")
+            d[i] = counter
+            # print("")
             if counter > max_counter:
                 max_counter = counter
                 num_res = i
